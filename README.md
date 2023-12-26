@@ -2,16 +2,15 @@
 
 obyčejný smrkanec letící vesmírem, dokud to neuchopíme.
 
-Adresáře:
+- využívá js astrochart knihovnu
 
-- astro: python prostředí s knihovnami
-- cache: dočasné soubory pro výpočty
-- smrk: vlastní aplikace
-- tests: testování scénářů a funkcionalit
+# Svelte + Vite
 
-## Jak to spustit
+This template should help get you started developing with Tauri and Svelte in Vite.
 
-## Jak to funguje
+Run by `yarn tauri dev`
 
-Většina práce je provedena modulem [g-battaglia/kerykeion](https://github.com/g-battaglia/kerykeion).
-Grafické rozhraní je obohaceno o některé prvky, aby dokázalo konkurovat aplikaci StarFisher.
+## Recommended IDE Setup
+
+[VS Code](https://code.visualstudio.com/) + [Svelte](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer).
+
