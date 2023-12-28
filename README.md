@@ -4,6 +4,8 @@ obyčejný smrkanec letící vesmírem, dokud to neuchopíme.
 
 - využívá js astrochart knihovnu
 
+![preview](./astro-rust.png)
+
 # Svelte + Vite
 
 This template should help get you started developing with Tauri and Svelte in Vite.
