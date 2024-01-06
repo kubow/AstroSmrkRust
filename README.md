@@ -1,16 +1,18 @@
 # AstroSmrk
 
-obyčejný smrkanec letící vesmírem, dokud to neuchopíme.
-
-- využívá js astrochart knihovnu
+Astrology application meant to run anywhere.
+Data stored using [DuckDB](https://duckdb.org/)
 
 ![preview](./astro-rust.png)
 
-# Svelte + Vite
+# Details
 
-This template should help get you started developing with Tauri and Svelte in Vite.
-
-Run by `yarn tauri dev`
+- backend part build with Rust + Tauri package.
+    - translation preparation
+    - hold the development process
+- frontend part is build in Svelte + Vite.
+    - `@astrodraw/astrochart`
+- start developing by `yarn tauri dev`.
 
 ## Recommended IDE Setup
 
