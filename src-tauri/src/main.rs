@@ -1,22 +1,39 @@
 // Prevents additional console window on Windows in release, DO NOT REMOVE!!
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
+//mod storage;
+//use tauri::{Builder, Manager, Result};
+
+//use crate::storage::DuckDBDataManagerImpl;
+
+use tauri::{generate_context, generate_handler};
+use std::collections::HashMap;
+
 // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
 #[tauri::command]
-fn greet(name: &str) -> String {
-    format!("Hello, {}! You've been greeted from Rust!", name)
-}
+fn translation(name: &str) -> String {
+    let translations = {
+        let mut translations = HashMap::new();
+        translations.insert("en", "Using the English language");
+        translations.insert("es", "Utilizando el idioma inglés");
+        translations.insert("fr", "Utilisant la langue anglaise");
+        translations.insert("de", "Verwenden Sie die englische Sprache");
+        translations
+    };
 
-#[tauri::command]
-fn get_horoscope(sign: String) -> String {
-    // Your astrology logic here
-    // Return the horoscope for the given sign
-    format!("Today's horoscope for {}: ...", sign)
+    match translations.get(name) {
+        Some(translation) => translation.to_string(),
+        None => {
+            println!("Translation not found for name: {}", name);
+            String::from("Unknown language")
+        }
+    }
 }
 
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![greet])
-        .run(tauri::generate_context!())
+        //.manage(DuckDBDataManagerImpl::new().unwrap()) // Initialize your data manager and pass it to Tauri's manager
+        .invoke_handler(generate_handler![translation])
+        .run(generate_context!())
         .expect("error while running tauri application");
 }

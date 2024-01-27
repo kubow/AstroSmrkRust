@@ -6,14 +6,14 @@
 
   async function greet(){
     // Learn more about Tauri commands at https://tauri.app/v1/guides/features/command
-    greetMsg = await invoke("greet", { name })
+    greetMsg = await invoke("translation", { name })
   }
 </script>
 
 <div>
   <form class="row" on:submit|preventDefault={greet}>
     <input id="greet-input" placeholder="Input details..." bind:value={name} />
-    <button type="submit">Greet</button>
+    <button type="submit">Show translation</button>
   </form>
   <p>{greetMsg}</p>
 </div>
