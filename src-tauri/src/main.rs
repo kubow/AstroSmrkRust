@@ -2,10 +2,13 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 //mod storage;
-//use tauri::{Builder, Manager, Result};
-
 //use crate::storage::DuckDBDataManagerImpl;
 
+//mod swiss_ephem;
+//use swiss_ephem::{Date, Planet};
+//use swiss_ephem::calculate_planet_position;
+
+//use tauri::{Builder, Manager, Result};
 use tauri::{generate_context, generate_handler};
 use std::collections::HashMap;
 
@@ -29,6 +32,7 @@ fn translation(name: &str) -> String {
         }
     }
 }
+
 
 fn main() {
     tauri::Builder::default()
