@@ -1,0 +1,8 @@
+{
+    "welcome": "Welcome to my Tauri app!",
+    "hello": "Hello, world!",
+    "buttonText": "Click me!",
+    "error": "An error occurred: {error}",
+    "loading": "Loading...",
+    "empty": "No data found."
+}
