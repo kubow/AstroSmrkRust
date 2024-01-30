@@ -1,26 +1,13 @@
 <script>
   // load from language db
+  let mFileIcon = `background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg>')`
+  let mSettingsIcon;
+  let mExitIcon;
 </script>
 
 <ul class="menu">
-  <li class="item">
-    <a href="/">
-      <svg
-        viewBox="0 0 24 24"
-        width="18"
-        height="18"
-        stroke="currentColor"
-        stroke-width="2"
-        fill="none"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      >
-        <rect x="3" y="3" width="7" height="7"></rect>
-        <rect x="14" y="3" width="7" height="7"></rect>
-        <rect x="14" y="14" width="7" height="7"></rect>
-        <rect x="3" y="14" width="7" height="7"></rect>
-      </svg>
-    </a>
+  <li class="item" style={mFileIcon}>
+    <a href="/" on:click={() => { window.location.href = "/"; }}>.</a>
   </li>
   <li class="item">
     <a href="/">
@@ -55,12 +42,18 @@
     align-items: center;
     flex-wrap: nowrap;
     justify-content: center;
-    background-color: #2b0e0e;
+    background-color: var(--bg-color);
   }
   .item {
+    color: var(--main-color);
+    background-repeat: no-repeat;
+    min-width: 50px;
     display: inline-flex;
     column-gap: 0.5rem;
     align-items: center;
+  }
+  svg {
+    color: var(--main-color);
   }
   @media all and (max-width: 1000px) {
     ul {
@@ -69,10 +62,7 @@
 
     li {
       flex: 1 1 50%;
-    }
-
-    .user {
-      flex: 1 1 33.33%;
+      min-width: 50px;
     }
   }
 </style>

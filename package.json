@@ -11,7 +11,8 @@
   },
   "dependencies": {
     "@astrodraw/astrochart": "^3.0.2",
-    "@tauri-apps/api": "^1.5.2"
+    "@tauri-apps/api": "^1.5.2",
+    "date-picker-svelte": "^2.10.1"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.4.2",
