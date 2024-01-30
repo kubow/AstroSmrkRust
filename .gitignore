@@ -29,6 +29,7 @@ Cargo.lock
 
 # Editor directories and files
 .vscode/*
+.obsidian/*
 !.vscode/extensions.json
 .idea
 .DS_Store
