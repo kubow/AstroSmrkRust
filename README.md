@@ -9,8 +9,9 @@ Astrology application meant to run anywhere.
 - backend part build with Rust + Tauri package.
   - hold the development process
   - releases packages
-- frontend part is build in Svelte + Vite.
+- frontend part is build in Svelte + Vite with additional packages.
   - `@astrodraw/astrochart`
+  - `date-picker-svelte`
 - start developing by `yarn tauri dev`.
 - build by `cargo tauri build`
 
