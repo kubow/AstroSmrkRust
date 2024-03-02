@@ -52,6 +52,7 @@ jobs:
   publish:
     needs: build-binaries
     runs-on: ubuntu-latest
+    tag_name: 0-0
     steps:
       - uses: actions/checkout@v2
       # Download the previously uploaded artifacts
