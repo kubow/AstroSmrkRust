@@ -27,7 +27,7 @@ jobs:
 
       - name: Install Vite
         run: |
-          npm install -g vite
+          npm install vite
 
       - name: install Rust stable
         uses: dtolnay/rust-toolchain@stable
