@@ -1,7 +1,7 @@
 [package]
 name = "astro-smrk"
-version = "0.0.0"
-description = "A Tauri App"
+version = "0.0.1"
+description = "Kefer Astrology"
 authors = ["you"]
 license = ""
 repository = ""
@@ -10,16 +10,23 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [build-dependencies]
-tauri-build = { version = "1.5", features = [] }
+tauri-build = { version = "2.0.0-beta", features = [] }
+
 
 [dependencies]
-tauri = { version = "1.5", features = ["shell-open"] }
+tauri = { version = "2.0.0-beta", features = [] }
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-duckdb = "0.9.2"
 libastro = "0.1.4"
+# diesel = { version = "1.4.5", features = ["sqlite"] }
+rust-i18n = "3.0.1"
+tauri-plugin-shell = "2.0.0-beta.3"
 
 [features]
 # this feature is used for production builds or when `devPath` points to the filesystem
 # DO NOT REMOVE!!
 custom-protocol = ["tauri/custom-protocol"]
+
+[lib]
+name = "app_lib"
+crate-type = ["staticlib", "cdylib", "rlib", "lib"]
