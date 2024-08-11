@@ -1,9 +1,24 @@
 {
+  "productName": "kefer-astrology",
+  "version": "0.0.0",
+  "identifier": "com.tauri.dev",
   "build": {
     "beforeDevCommand": "yarn dev",
+    "devUrl": "http://localhost:1420",
     "beforeBuildCommand": "yarn build",
-    "frontendDist": "../dist",
-    "devUrl": "http://localhost:1420"
+    "frontendDist": "../build"
+  },
+  "app": {
+    "windows": [
+      {
+        "title": "kefer-astrology",
+        "width": 800,
+        "height": 600
+      }
+    ],
+    "security": {
+      "csp": null
+    }
   },
   "bundle": {
     "active": true,
@@ -15,23 +30,5 @@
       "icons/icon.icns",
       "icons/icon.ico"
     ]
-  },
-  "productName": "astro-smrk",
-  "version": "0.0.0",
-  "identifier": "com.tauri.astro",
-  "plugins": {},
-  "app": {
-    "windows": [
-      {
-        "fullscreen": false,
-        "resizable": true,
-        "title": "astro-smrk",
-        "width": 800,
-        "height": 600
-      }
-    ],
-    "security": {
-      "csp": null
-    }
   }
 }

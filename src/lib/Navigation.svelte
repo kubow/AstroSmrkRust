@@ -13,8 +13,8 @@
     <a href="/">
       <svg
         viewBox="0 0 24 24"
-        width="18"
-        height="18"
+        width="30%"
+        height="30%"
         stroke="currentColor"
         stroke-width="2"
         fill="none"

@@ -1,22 +1,21 @@
-<script>
-  import { DateInput } from 'date-picker-svelte';
-  import InputGroup from "./lib/InputGroup.svelte";
-  import Navigation from "./lib/Navigation.svelte";
-  import Zodiac from "./lib/Zodiac.svelte";
+<script lang="ts">
+  //import { invoke } from "@tauri-apps/api/core";
+  import InputGroup from "../lib/InputGroup.svelte";
+  import Navigation from "../lib/Navigation.svelte";
+  //import Zodiac from "../lib/Zodiac.svelte";
+
+  let greetMsg = "";
+  let innerWidth = 0;
+  let innerHeight = 0;
 
   // Default colors setup
   let mainColor = "#1c62a8";
-  let color = "black";
-  let bgColor = "white";
+
   // Predefined colors
   const lightColors = ["#FFFFFF", "#333333", "#FF5733"];
   const darkColors = ["#000000", "#CCCCCC", "#FFC300"];
 
-  // Project setup
-  let dateFirst = new Date();
-  let dateSecond = new Date();
-
-
+  //$: condition = innerWidth*1.33 <= innerHeight
 
   function switch_mode() {
     const isDarkMode = document.body.classList.contains("dark-mode");
@@ -29,15 +28,14 @@
     document.body.classList.toggle("dark-mode");
   }
 
-  function select_color(event) {
-    mainColor = event.target.value;
-    document.documentElement.style.setProperty("--main-color", mainColor);
+  function select_color(event: Event) {
+    if (event.target instanceof HTMLInputElement) {
+      mainColor = event.target.value;
+      document.documentElement.style.setProperty("--main-color", mainColor);
+    } else {
+      console.log("Different event type, not setting color");
+    }
   }
-
-  let innerWidth = 0;
-  let innerHeight = 0;
-
-  //$: condition = innerWidth*1.33 <= innerHeight
 </script>
 
 <svelte:window bind:innerWidth bind:innerHeight />
@@ -48,21 +46,23 @@
   </nav>
   <div class="content">
     <main>
-      <!--Here be the wheel  --><Zodiac></Zodiac>
+      <!--Here be the wheel <Zodiac></Zodiac> -->
     </main>
     <aside>
         <button on:click={switch_mode}>Switch mode </button>
         <input type="color" bind:value={mainColor} on:change={select_color} />
         <p>Input details about first event:</p>
-        <DateInput bind:value={dateFirst} timePrecision="second" />
+        <!-- <DateInput bind:value={dateFirst} timePrecision="second" /> -->
         <p>Input details about second event:</p>
-        <DateInput bind:value={dateSecond} timePrecision="second"/>
+        <!-- <DateInput bind:value={dateSecond} timePrecision="second"/> -->
         <slot/>
       <InputGroup></InputGroup>
     </aside>
   </div>
   <footer>Kefer Astrology (c) 2024</footer>
 </main>
+
+  <p>{greetMsg}</p>
 
 <style>
   :root {
