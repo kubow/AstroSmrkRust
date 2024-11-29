@@ -10,8 +10,11 @@ Astrology application meant to run anywhere.
   - hold the development process
   - releases packages
 - frontend part is build in SvelteKit + Vite.
+- if you previously run any dev, you need to `cargo clean`.
 - start developing by `yarn tauri dev`.
 - build by `cargo tauri build`
+
+
 
 ## Recommended IDE Setup
 
