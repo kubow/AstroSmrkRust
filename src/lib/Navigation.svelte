@@ -6,6 +6,9 @@
 </script>
 
 <ul class="menu">
+  <li class="item">
+    Kefer
+  </li>
   <li class="item" style={mFileIcon}>
     <a href="/" on:click={() => { window.location.href = "/"; }}>.</a>
   </li>
@@ -34,23 +37,25 @@
 
 <style>
   .menu {
-    row-gap: 1rem;
+    align-items: center;
+    background-color: var(--bg-color);
     column-gap: 0.5rem;
-    padding: 1rem;
     display: flex;
     flex-direction: row;
-    align-items: center;
     flex-wrap: nowrap;
     justify-content: center;
-    background-color: var(--bg-color);
+    padding: 0;
+    row-gap: 1rem;
+    width: 100%;
   }
   .item {
+    align-items: baseline;
     color: var(--main-color);
     background-repeat: no-repeat;
     min-width: 50px;
     display: inline-flex;
+    flex-grow: 1;
     column-gap: 0.5rem;
-    align-items: center;
   }
   svg {
     color: var(--main-color);
