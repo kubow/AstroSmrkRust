@@ -1,9 +1,9 @@
 [package]
-name = "background-astrology"
+name = "background_astrology"
 version = "0.1.0"
 description = "Background functions for Kefer Astrology"
 authors = ["Kube Kubow"]
-licese = "CC"
+license = "CC" # MIT
 edition = "2021"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
