@@ -2,6 +2,7 @@
   //import { invoke } from "@tauri-apps/api/core";
   import InputGroup from "$lib/InputGroup.svelte";
   import Navigation from "$lib/Navigation.svelte";
+  //import Zodiac from "$lib/Zodiac_custom.svelte";
   import Zodiac from "$lib/Zodiac_custom.svelte";
   import CollapsibleSection from "$lib/CollapsibleSection.svelte";
 
